@@ -75,6 +75,7 @@
   },
   "dependencies": {
     "@vscode/vsce": "^4.0.0",
+    "jimp": "^1.6.1",
     "xlsx": "^0.18.5"
   }
 }
