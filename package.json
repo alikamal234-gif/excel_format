@@ -1,0 +1,80 @@
+{
+  "name": "excel-viewer-pro",
+  "displayName": "Excel Viewer Pro",
+  "description": "View and edit Excel (.xlsx, .xls) files directly in VS Code with a beautiful spreadsheet-like interface. Supports multiple sheets, cell editing, search, and export.",
+  "version": "1.0.0",
+  "publisher": "youcode",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Visualization",
+    "Other"
+  ],
+  "keywords": [
+    "excel",
+    "xlsx",
+    "xls",
+    "spreadsheet",
+    "csv",
+    "viewer",
+    "editor",
+    "table"
+  ],
+  "icon": "assets/icon.png",
+  "galleryBanner": {
+    "color": "#217346",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "activationEvents": [],
+  "main": "./src/extension.js",
+  "contributes": {
+    "customEditors": [
+      {
+        "viewType": "excelViewerPro.spreadsheet",
+        "displayName": "Excel Viewer Pro",
+        "selector": [
+          {
+            "filenamePattern": "*.xlsx"
+          },
+          {
+            "filenamePattern": "*.xls"
+          },
+          {
+            "filenamePattern": "*.xlsm"
+          }
+        ],
+        "priority": "default"
+      }
+    ],
+    "commands": [
+      {
+        "command": "excelViewerPro.openFile",
+        "title": "Open Excel File",
+        "category": "Excel Viewer Pro"
+      },
+      {
+        "command": "excelViewerPro.exportCSV",
+        "title": "Export Current Sheet as CSV",
+        "category": "Excel Viewer Pro"
+      },
+      {
+        "command": "excelViewerPro.exportJSON",
+        "title": "Export Current Sheet as JSON",
+        "category": "Excel Viewer Pro"
+      }
+    ]
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "dependencies": {
+    "@vscode/vsce": "^4.0.0",
+    "xlsx": "^0.18.5"
+  }
+}

@@ -1,0 +1,10 @@
+.vscode/**
+.vscode-test/**
+.gitignore
+node_modules/**
+*.map
+.eslintrc.json
+.prettierrc
+*.vsix
+create-test-file.js
+test-data.xlsx
